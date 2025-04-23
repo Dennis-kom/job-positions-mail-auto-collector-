@@ -2,6 +2,8 @@ import logging
 from os.path import exists
 import datetime
 
+from data_sources_handlers.inner_data_protocols.activity_date_time import ActivityDate
+
 
 class LogsParser:
 
@@ -20,3 +22,6 @@ class LogsParser:
                 for line in log.readlines():
                     self.logs_inputs.append(line)
 
+
+    def get_last_activity_date(self) -> ActivityDate:
+        pass
